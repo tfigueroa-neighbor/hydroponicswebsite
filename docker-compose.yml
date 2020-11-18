@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  wordpress:
+    depends_on:
+      - db
+    image: hydroponics:latest
+    container_name: hydroponics_wordpress
+    volumes: 
+      - ./wordpress/html:/var/www/html
