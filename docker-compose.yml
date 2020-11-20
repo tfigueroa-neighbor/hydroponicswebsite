@@ -4,10 +4,11 @@ services:
   wordpress:
     image: hydroponics:latest
     container_name: hydroponics_wordpress
-    volumes: 
-      - ./wordpress/html:/var/www/html
+    volumes: [ ./wordpress/html:/var/www/html ]
     networks:
       - wpsite
+    ports:
+      - 3000:80
 
 networks:
   wpsite:
